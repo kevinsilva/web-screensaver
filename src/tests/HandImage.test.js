@@ -1,4 +1,4 @@
-import Rectangle from "../rectangle.js";
+import Rectangle from "../Rectangle.js";
 import HandImage from "../HandImage.js";
 
 describe("Hand Image", () => {

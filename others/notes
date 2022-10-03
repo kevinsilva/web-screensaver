@@ -22,9 +22,8 @@
 // We already have the rectangles, the tools for working with Positioning
 // We also have the collision detection
 
-
 // / Class ScreenPositionManager
-// 1. improve ViewportManager.withinboundaries() test to check for all positive 
+// 1. improve ViewportManager.withinboundaries() test to check for all positive
 //     and negative cases
 // 1. Implement Rectangle.setY() and test it
 
@@ -33,21 +32,21 @@
 
 // Clock ...
 
-
+// rect.topLeft.x >= colision.topLeft.x &&
+// rect.topLeft.x <= colision.topRight.x &&
+// rect.topLeft.y >= colision.topLeft.y &&
+// rect.topLeft.y <= colision.bottomRight.y
 
 // Homework
 // - isNumberInRange(value, min, max)
 
 // - refactorar todos os lugares para usar essa função: Rectangle, ViewportManager
 
-// - Começar a GUI! 
+// - Começar a GUI!
 //   - index.html + <style> CSS para a imagem e relógio na tela.
 //   - Usar ViewportManager, Rectangle e JS para calcular as posições dos elementos
 //   - Refresh da página reposiciona os elementos na tela de acordo com as especificações!
 //   - JavaScript Module loading
-
-
-
 
 //   <script type="module">
 //       // fazer tudo inline
@@ -97,13 +96,10 @@
 //       }, 1000);
 //     </script>
 
-
-
 // commands for testing
 //     npm init -y
 //     npm i --save-dev jest
 //     npm install --save-dev @babel/plugin-transform-modules-commonjs
-
 
 // in package.json
 
@@ -120,7 +116,6 @@
 //     "scripts": {
 //     "test": "jest --env=jsdom"
 //   },
-
 
 //   Full package.json
 

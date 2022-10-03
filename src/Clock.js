@@ -1,10 +1,15 @@
-import Rectangle from "./rectangle.js";
+import Rectangle from "./Rectangle.js";
 
 export default class Clock {
   constructor(referenceElement) {
     this.referenceElement = referenceElement;
     this.updateTime();
-    this.rectangle = new Rectangle(0, 0, referenceElement.offsetWidth, referenceElement.offsetHeight);
+    this.rectangle = new Rectangle(
+      0,
+      0,
+      referenceElement.offsetWidth,
+      referenceElement.offsetHeight
+    );
   }
 
   render() {

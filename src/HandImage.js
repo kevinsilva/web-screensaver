@@ -1,4 +1,4 @@
-import Rectangle from "./rectangle.js";
+import Rectangle from "./Rectangle.js";
 
 export default class HandImage {
   constructor(referenceElement) {
