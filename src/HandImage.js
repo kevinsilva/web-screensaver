@@ -17,11 +17,11 @@ export default class HandImage {
   }
 
   render() {
-    let randomSide = Math.random() < 0.5 ? -1 : 1;
-    this.referenceElement.style.transform = 'scaleX(' + randomSide + ')';
+    const randomSide = Math.random() < 0.5 ? -1 : 1;
+    this.referenceElement.style.transform = `scaleX(${randomSide})`;
 
-    this.referenceElement.style.top = this.rectangle.y + 'px';
-    this.referenceElement.style.left = this.rectangle.x + 'px';
+    this.referenceElement.style.top = `${this.rectangle.y}px`;
+    this.referenceElement.style.left = `${this.rectangle.x}px`;
   }
 
   catch() {

@@ -12,7 +12,7 @@ export default class Image {
   }
 
   render() {
-    this.referenceElement.style.top = this.rectangle.y + 'px';
-    this.referenceElement.style.left = this.rectangle.x + 'px';
+    this.referenceElement.style.top = `${this.rectangle.y}px`;
+    this.referenceElement.style.left = `${this.rectangle.x}px`;
   }
 }

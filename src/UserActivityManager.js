@@ -4,14 +4,26 @@ export default class UserActivityManager {
     this.isOverLimit = false;
 
     let absentTimer;
-    let activities = ['keypress', 'mousemove', 'click', 'scroll', 'touchstart'];
+    const activities = [
+      'keypress',
+      'mousemove',
+      'click',
+      'scroll',
+      'touchstart',
+    ];
 
-    const startTimer = () => {
-      return setTimeout(() => {
+    // const startTimer = () => {
+    //   return setTimeout(() => {
+    //     this.isOverLimit = true;
+    //     onOverLimit();
+    //   }, this.absentTimeLimit);
+    // };
+
+    const startTimer = () =>
+      setTimeout(() => {
         this.isOverLimit = true;
         onOverLimit();
       }, this.absentTimeLimit);
-    };
 
     const userActivity = () => {
       this.isOverLimit = false;
@@ -22,7 +34,7 @@ export default class UserActivityManager {
 
     absentTimer = startTimer();
 
-    for (let i = 0; i <= activities.length; i++) {
+    for (let i = 0; i <= activities.length; i += 1) {
       document.addEventListener(activities[i], userActivity);
     }
   }

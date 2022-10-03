@@ -10,9 +10,9 @@ export default class Rectangle {
 
   setX(x) {
     this.x = x;
-    this.topLeft = { x: x };
+    this.topLeft = { x };
     this.topRight = { x: x + this.width };
-    this.bottomLeft = { x: x };
+    this.bottomLeft = { x };
     this.bottomRight = { x: x + this.width };
   }
 
