@@ -1,0 +1,154 @@
+// Simple Web Screen-Saver
+// After a specified time of inactivity, the screen saver is activated.
+// It is deactivated once user interacts in the page.
+// A full-page black background is shown on top of the page
+// On top of it is shown an image and a clock both at random position but
+// never on top of each other and out of the screen boundaries.
+// After some time, the image and the clock change to another random position.
+// The image and clock always fade-in and fade-out.
+// It works even if window size changes.
+// Integration: add just one JS file to page and initialise it with the image URL.
+// Extra: make image and clock responsive
+// Extra: configure waiting time
+
+// How much time without interactions until showing the WSS?
+// How to detect mouse or keyboard interaction.
+// Reset inactivity measuring time.
+// States: hiddenAndCounting or shownNotCounting. (boolean)
+// Class DetectBehavior?, ScreenMaker?, UserActivityMonitor?
+
+// Positioning
+
+// We already have the rectangles, the tools for working with Positioning
+// We also have the collision detection
+
+
+// / Class ScreenPositionManager
+// 1. improve ViewportManager.withinboundaries() test to check for all positive 
+//     and negative cases
+// 1. Implement Rectangle.setY() and test it
+
+// Countdown timer to change positions
+// States: currentTime, ImageXY, ClockXY
+
+// Clock ...
+
+
+
+// Homework
+// - isNumberInRange(value, min, max)
+
+// - refactorar todos os lugares para usar essa função: Rectangle, ViewportManager
+
+// - Começar a GUI! 
+//   - index.html + <style> CSS para a imagem e relógio na tela.
+//   - Usar ViewportManager, Rectangle e JS para calcular as posições dos elementos
+//   - Refresh da página reposiciona os elementos na tela de acordo com as especificações!
+//   - JavaScript Module loading
+
+
+
+
+//   <script type="module">
+//       // fazer tudo inline
+//       import Rectangle from "./Rectangle.js";
+//       import ViewportManager from "./ViewportManager.js";
+
+//       // obter o tamanho do viewport da tela: width e height ???
+//       const sw = document.documentElement.clientWidth;
+//       const sh = document.documentElement.clientHeight;
+//       // crair um ViewportManager com o tamanho da tela
+//       const viewportManager = new ViewportManager(sw, sh);
+
+//       // obter os elementos HTML do clock e da imagem
+//       const clockEl = document.getElementById("swss__clock");
+//       const logoEl = document.getElementById("swss__logo");
+//       // criar Rectangles com as dimensões dos elementos ???
+//       const clockRect = new Rectangle(
+//         0,
+//         0,
+//         clockEl.offsetWidth,
+//         clockEl.offsetHeight
+//       );
+//       const logoRect = new Rectangle(
+//         0,
+//         0,
+//         logoEl.offsetWidth,
+//         logoEl.offsetHeight
+//       );
+
+//       console.log(logoRect);
+
+//       viewportManager.arrange(clockRect, logoRect);
+
+//       // atualizar o o posicionamento dos elementos HTML através do estilo
+//       clockEl.style.top = clockRect.y + "px";
+//       clockEl.style.left = clockRect.x + "px";
+
+//       logoEl.style.top = logoRect.y + "px";
+//       logoEl.style.left = logoRect.x + "px";
+
+//       document.getElementById("swss").style.opacity = 1;
+
+//       // atualizar relógio a cada segundo
+//       clockEl.innerText = new Date().toLocaleTimeString();
+//       setInterval(() => {
+//         clockEl.innerText = new Date().toLocaleTimeString();
+//       }, 1000);
+//     </script>
+
+
+
+// commands for testing
+//     npm init -y
+//     npm i --save-dev jest
+//     npm install --save-dev @babel/plugin-transform-modules-commonjs
+
+
+// in package.json
+
+//   "babel": {
+//     "env": {
+//       "test": {
+//         "plugins": ["@babel/plugin-transform-modules-commonjs"]
+//       }
+//     }
+//   },
+
+//   in package.json, change test to "jest". Add flag jsdom to test dom event listeners
+
+//     "scripts": {
+//     "test": "jest --env=jsdom"
+//   },
+
+
+//   Full package.json
+
+//   {
+//   "name": "web_screensaver",
+//   "version": "1.0.0",
+//   "description": "",
+//   "main": "index.js",
+//   "scripts": {
+//     "test": "jest --env=jsdom"
+//   },
+//   "babel": {
+//     "env": {
+//       "test": {
+//         "plugins": [
+//           "@babel/plugin-transform-modules-commonjs"
+//         ]
+//       }
+//     }
+//   },
+//   "keywords": [],
+//   "author": "",
+//   "license": "ISC",
+//   "devDependencies": {
+//     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+//     "babel-core": "^6.26.3",
+//     "babel-jest": "^27.0.6",
+//     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+//     "jest": "^27.0.6"
+//   }
+// }

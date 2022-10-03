@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Screen Saver</title>
+</head>
+
+<body>
+    <div id="screen-saver">
+        <h1 id="screen-saver__clock"></h1>
+        <img src="/others/open.png" id="screen-saver__img" />
+        <div class="screen-saver__intro">
+            <p class="screen-saver__caption">time is <span class="screen-saver__highlighted">running away...</span></p>
+        </div>
+    </div>
+    <script type="module">
+        import ViewportManager from "./viewPortManager.js"
+        import Clock from "./clock.js";
+        import HandImage from "./HandImage.js";
+        import UserActivityManager from "./userActivityManager.js";
+        import IntroManager from "./introManager.js";
+
+        const clock = new Clock(document.getElementById("screen-saver__clock"));
+        const handImg = new HandImage(document.getElementById("screen-saver__img"));
+
+        const viewPortManager = new ViewportManager(
+            document.documentElement.clientWidth,
+            document.documentElement.clientHeight
+        );
+
+        const intro = new IntroManager(document.querySelector(".screen-saver__intro"));
+
+        const positionAndRender = () => {
+            viewPortManager.position(clock.rectangle, handImg.rectangle);
+            clock.render();
+            handImg.render();
+            intro.hide();
+        }
+
+        let positionAndRenderInterval;
+
+        const runScreenSaver = () => {
+            intro.show();
+            document.getElementById("screen-saver").style.opacity = 1;
+            positionAndRenderInterval = setInterval(positionAndRender, 3000);
+        }
+
+        const stopScreenSaver = () => {
+            document.getElementById("screen-saver").style.opacity = 0;
+            clearInterval(positionAndRenderInterval);
+        }
+
+        positionAndRender();
+        const userActivityManager = new UserActivityManager(runScreenSaver, stopScreenSaver);
+
+        setInterval(() => clock.render(), 1000);
+    </script>
+</body>
+
+</html>

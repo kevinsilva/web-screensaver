@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+@font-face {
+    font-family: "Hitchcock";
+    src: url(./others/Hitchcock\ Regular.ttf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #E9EAED;
+    font-family: 'Oswald', sans-serif;
+    font-family: "Hitchcock", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 3rem;
+    color: black;
+}
+
+#screen-saver {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: block;
+}
+
+#screen-saver__clock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#screen-saver__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 198.75px;
+    height: 113.57px;
+    transition: all .5s;
+}
+
+.screen-saver__intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.screen-saver__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: inline-block;
+    font-size: 5rem;
+    text-align: center;
+    transition: all 1s;
+    margin: 0 auto;
+    animation: typing 4s steps(23, end);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.screen-saver__highlighted {
+    animation: color linear 1s forwards;
+    animation-delay: 1s;
+    display: inline-block;
+}
+
+@keyframes color {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: #DF5650;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
