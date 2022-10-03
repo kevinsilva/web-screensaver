@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom",
+    "prettier": "npx prettier --write ."
   },
   "babel": {
     "env": {
@@ -23,10 +24,10 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^27.0.6",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "prettier": "2.7.1"
   },
   "dependencies": {
     "jest-environment-jsdom": "^27.1.0"
   }
 }
-

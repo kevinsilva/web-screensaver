@@ -18,7 +18,7 @@ Due to the encapsulation and export of the ES6 class modules, the code present i
 
 ## Usage
 
-Import the `Clock`, `HandImage`, `ViewportManager`,`UserActivityManager` and `IntroManager` classes from local directory.
+Import the `Clock`, `HandImage`, `ViewportManager`,`UserActivityManager` and `IntroManager` classes from `src` directory.
 
 Create new instances of the _Clock_, the _Image_ and the _IntroManager_ with corresponding document elements as arguments.
 
