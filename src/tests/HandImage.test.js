@@ -1,8 +1,8 @@
-import Rectangle from "../Rectangle.js";
-import HandImage from "../HandImage.js";
+import Rectangle from '../Rectangle.js';
+import HandImage from '../HandImage.js';
 
-describe("Hand Image", () => {
-  describe("when it is created", () => {
+describe('Hand Image', () => {
+  describe('when it is created', () => {
     let catchingHand;
     let fakeElement;
 
@@ -12,8 +12,8 @@ describe("Hand Image", () => {
         offsetWidth: 100,
         offsetHeight: 100,
         style: {
-          top: "",
-          left: "",
+          top: '',
+          left: '',
         },
       };
       catchingHand = new HandImage(fakeElement);
@@ -23,26 +23,26 @@ describe("Hand Image", () => {
       jest.useRealTimers();
     });
 
-    it("has a reference element", () => {
+    it('has a reference element', () => {
       expect(catchingHand.referenceElement).toBe(fakeElement);
     });
 
-    it("it has a base rectangle positioned on X0 Y0", () => {
+    it('it has a base rectangle positioned on X0 Y0', () => {
       expect(catchingHand.rectangle).toStrictEqual(
         new Rectangle(0, 0, 100, 100)
       );
     });
 
-    it("starts in the open state", () => {
+    it('starts in the open state', () => {
       expect(catchingHand.isOpen).toBe(true);
     });
 
-    it("changes to closed state after 1000ms", () => {
+    it('changes to closed state after 1000ms', () => {
       jest.advanceTimersByTime(1000); //avançar no tempo 1s
       expect(catchingHand.isOpen).toEqual(false);
     });
 
-    it("changes back to open state after 2000ms", () => {
+    it('changes back to open state after 2000ms', () => {
       jest.advanceTimersByTime(2000); //avançar no tempo 1s
       expect(catchingHand.isOpen).toEqual(true);
     });
@@ -53,8 +53,8 @@ describe("Hand Image", () => {
       offsetWidth: 100,
       offsetHeight: 100,
       style: {
-        top: "",
-        left: "",
+        top: '',
+        left: '',
       },
     };
 
@@ -63,7 +63,7 @@ describe("Hand Image", () => {
     catchingImage.rectangle.setY(100);
     catchingImage.render();
 
-    expect(catchingImage.referenceElement.style.top).toEqual("100px");
-    expect(catchingImage.referenceElement.style.left).toEqual("100px");
+    expect(catchingImage.referenceElement.style.top).toEqual('100px');
+    expect(catchingImage.referenceElement.style.left).toEqual('100px');
   });
 });

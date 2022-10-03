@@ -1,4 +1,4 @@
-import { isNumberInRange, getRandomNumberInRange } from "./utilities.js";
+import { isNumberInRange, getRandomNumberInRange } from './utilities.js';
 
 export default class ViewportManager {
   constructor(width, height) {

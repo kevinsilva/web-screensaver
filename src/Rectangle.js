@@ -1,4 +1,4 @@
-import { isNumberInRange } from "./utilities.js";
+import { isNumberInRange } from './utilities.js';
 
 export default class Rectangle {
   constructor(x, y, width, height) {

@@ -1,8 +1,8 @@
-import Rectangle from "../Rectangle.js";
-import Image from "../Image.js";
+import Rectangle from '../Rectangle.js';
+import Image from '../Image.js';
 
-describe("Image", () => {
-  describe("when it is created", () => {
+describe('Image', () => {
+  describe('when it is created', () => {
     let img;
     let fakeElement;
 
@@ -11,18 +11,18 @@ describe("Image", () => {
         offsetWidth: 100,
         offsetHeight: 100,
         style: {
-          top: "",
-          left: "",
+          top: '',
+          left: '',
         },
       };
       img = new Image(fakeElement);
     });
 
-    it("has a reference element", () => {
+    it('has a reference element', () => {
       expect(img.referenceElement).toBe(fakeElement);
     });
 
-    it("it has a base rectangle positioned on X0 Y0", () => {
+    it('it has a base rectangle positioned on X0 Y0', () => {
       expect(img.rectangle).toStrictEqual(new Rectangle(0, 0, 100, 100));
     });
   });
@@ -32,8 +32,8 @@ describe("Image", () => {
       offsetWidth: 100,
       offsetHeight: 100,
       style: {
-        top: "",
-        left: "",
+        top: '',
+        left: '',
       },
     };
 
@@ -42,7 +42,7 @@ describe("Image", () => {
     img.rectangle.setY(100);
     img.render();
 
-    expect(img.referenceElement.style.top).toEqual("100px");
-    expect(img.referenceElement.style.left).toEqual("100px");
+    expect(img.referenceElement.style.top).toEqual('100px');
+    expect(img.referenceElement.style.left).toEqual('100px');
   });
 });

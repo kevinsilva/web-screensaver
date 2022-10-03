@@ -1,7 +1,7 @@
-import Rectangle from "../Rectangle.js";
+import Rectangle from '../Rectangle.js';
 
-describe("Rectangle", () => {
-  it("it can be initialized with x, y, width and height", () => {
+describe('Rectangle', () => {
+  it('it can be initialized with x, y, width and height', () => {
     const rect = new Rectangle(0, 0, 100, 50);
 
     expect(rect.x).toEqual(0);
@@ -10,7 +10,7 @@ describe("Rectangle", () => {
     expect(rect.height).toEqual(50);
   });
 
-  it("has top left coordenates", () => {
+  it('has top left coordenates', () => {
     let rect = new Rectangle(0, 0, 100, 50);
     expect(rect.topLeft.x).toEqual(0);
     expect(rect.topLeft.y).toEqual(0);
@@ -20,7 +20,7 @@ describe("Rectangle", () => {
     expect(rect.topLeft.y).toEqual(30);
   });
 
-  it("has top right coordenates", () => {
+  it('has top right coordenates', () => {
     let rect = new Rectangle(0, 0, 100, 50);
     expect(rect.topRight.x).toEqual(100);
     expect(rect.topRight.y).toEqual(0);
@@ -30,7 +30,7 @@ describe("Rectangle", () => {
     expect(rect.topRight.y).toEqual(30);
   });
 
-  it("has bottom left coordinates", () => {
+  it('has bottom left coordinates', () => {
     let rect = new Rectangle(0, 0, 100, 50);
     expect(rect.bottomLeft.x).toEqual(0);
     expect(rect.bottomLeft.y).toEqual(50);
@@ -40,7 +40,7 @@ describe("Rectangle", () => {
     expect(rect.bottomLeft.y).toEqual(80);
   });
 
-  it("has bottom right coordinates", () => {
+  it('has bottom right coordinates', () => {
     let rect = new Rectangle(0, 0, 100, 50);
     expect(rect.bottomRight.x).toEqual(100);
     expect(rect.bottomRight.y).toEqual(50);
@@ -50,7 +50,7 @@ describe("Rectangle", () => {
     expect(rect.bottomRight.y).toEqual(80);
   });
 
-  it("can detect colision with other rectangles", () => {
+  it('can detect colision with other rectangles', () => {
     const rectangles = [
       new Rectangle(175, 175, 50, 50), // topLeft vertex colides
       new Rectangle(75, 175, 50, 50), // topRight vertex colides
@@ -71,7 +71,7 @@ describe("Rectangle", () => {
     });
   });
 
-  it("can detect NO colision with other rectangles", () => {
+  it('can detect NO colision with other rectangles', () => {
     const rectangles = [
       new Rectangle(0, 0, 50, 50), // at topLeft
       new Rectangle(225, 0, 50, 50), // at topRight
@@ -91,7 +91,7 @@ describe("Rectangle", () => {
     });
   });
 
-  it("updates all vertices whenever x or y changes", () => {
+  it('updates all vertices whenever x or y changes', () => {
     const rect1 = new Rectangle(0, 0, 100, 100);
 
     rect1.setX(100);

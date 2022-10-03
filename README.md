@@ -23,9 +23,9 @@ Import the `Clock`, `HandImage`, `ViewportManager`,`UserActivityManager` and `In
 Create new instances of the _Clock_, the _Image_ and the _IntroManager_ with corresponding document elements as arguments.
 
 ```js
-const clock = new Clock(document.getElementById("screen-saver__clock"));
-const handImg = new HandImage(document.getElementById("screen-saver__img"));
-const intro = new IntroManager(document.querySelector(".screen-saver__intro"));
+const clock = new Clock(document.getElementById('screen-saver__clock'));
+const handImg = new HandImage(document.getElementById('screen-saver__img'));
+const intro = new IntroManager(document.querySelector('.screen-saver__intro'));
 ```
 
 In order to set the viewport as a boundary for the screensaver's elements, create a new instance of the _ViewportManager_ with `document.documentElement.clientWidth` and `document.documentElement.clientHeight` as arguments.
@@ -53,12 +53,12 @@ let positionAndRenderInterval;
 
 const runScreenSaver = () => {
   intro.show();
-  document.getElementById("screen-saver").style.opacity = 1;
+  document.getElementById('screen-saver').style.opacity = 1;
   positionAndRenderInterval = setInterval(positionAndRender, 3000);
 };
 
 const stopScreenSaver = () => {
-  document.getElementById("screen-saver").style.opacity = 0;
+  document.getElementById('screen-saver').style.opacity = 0;
   clearInterval(positionAndRenderInterval);
 };
 ```

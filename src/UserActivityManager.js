@@ -4,7 +4,7 @@ export default class UserActivityManager {
     this.isOverLimit = false;
 
     let absentTimer;
-    let activities = ["keypress", "mousemove", "click", "scroll", "touchstart"];
+    let activities = ['keypress', 'mousemove', 'click', 'scroll', 'touchstart'];
 
     const startTimer = () => {
       return setTimeout(() => {

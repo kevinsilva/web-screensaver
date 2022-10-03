@@ -1,13 +1,13 @@
 export default class IntroManager {
-    constructor(referenceElement) {
-        this.referenceElement = referenceElement;
-    }
+  constructor(referenceElement) {
+    this.referenceElement = referenceElement;
+  }
 
-    show() {
-        this.referenceElement.style.display = "inline-block";
-    }
+  show() {
+    this.referenceElement.style.display = 'inline-block';
+  }
 
-    hide() {
-        this.referenceElement.style.display = "none";
-    }
+  hide() {
+    this.referenceElement.style.display = 'none';
+  }
 }

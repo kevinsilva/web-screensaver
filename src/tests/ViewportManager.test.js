@@ -1,15 +1,15 @@
-import Rectangle from "../Rectangle.js";
-import ViewportManager from "../ViewportManager.js";
+import Rectangle from '../Rectangle.js';
+import ViewportManager from '../ViewportManager.js';
 
-describe("Viewport Manager", () => {
-  it("can be initialized width and a height", () => {
+describe('Viewport Manager', () => {
+  it('can be initialized width and a height', () => {
     const screen = new ViewportManager(1600, 1200);
 
     expect(screen.width).toEqual(1600);
     expect(screen.height).toEqual(1200);
   });
 
-  it("can position two rectangles in its boundaries", () => {
+  it('can position two rectangles in its boundaries', () => {
     const rectangleOne = new Rectangle(0, 0, 100, 100);
     const rectangleTwo = new Rectangle(0, 0, 150, 250);
 
@@ -25,7 +25,7 @@ describe("Viewport Manager", () => {
     expect(screen.withinBoundaries(rectangleTwo)).toEqual(true);
   });
 
-  it("can detect if a rectangle is in its boundaries", () => {
+  it('can detect if a rectangle is in its boundaries', () => {
     const rectangles = [
       new Rectangle(0, 0, 100, 100), // at topLeft
       new Rectangle(1100, 0, 100, 100), // at topRight
@@ -44,7 +44,7 @@ describe("Viewport Manager", () => {
     });
   });
 
-  it("can detect if a rectangle is NOT in its boundaries", () => {
+  it('can detect if a rectangle is NOT in its boundaries', () => {
     const rectangles = [
       new Rectangle(-50, 0, 100, 100), // topLeft vertex outside boundaries
       new Rectangle(1200, 0, 100, 100), // topRight vertex outside boundaries
@@ -63,7 +63,7 @@ describe("Viewport Manager", () => {
     });
   });
 
-  it("can position two rectangles in random positions within its boundaries and without colision between them", () => {
+  it('can position two rectangles in random positions within its boundaries and without colision between them', () => {
     // ARRANGE
     const screen = new ViewportManager(1200, 1600);
     const rect1 = new Rectangle(0, 0, 100, 100);

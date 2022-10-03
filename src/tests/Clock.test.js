@@ -1,8 +1,8 @@
-import Clock from "../Clock.js";
-import Rectangle from "../Rectangle.js";
+import Clock from '../Clock.js';
+import Rectangle from '../Rectangle.js';
 
-describe("Clock", () => {
-  describe("when it is created", () => {
+describe('Clock', () => {
+  describe('when it is created', () => {
     let clock;
     let fakeElement;
 
@@ -10,25 +10,25 @@ describe("Clock", () => {
       fakeElement = {
         offsetWidth: 100,
         offsetHeight: 100,
-        innerText: "",
+        innerText: '',
         style: {
-          top: "",
-          left: "",
+          top: '',
+          left: '',
         },
       };
       clock = new Clock(fakeElement);
     });
 
-    it("has a reference element", () => {
+    it('has a reference element', () => {
       expect(clock.referenceElement).toBe(fakeElement);
     });
 
-    it("renders the local time", () => {
+    it('renders the local time', () => {
       const time = new Date().toLocaleTimeString();
       expect(clock.referenceElement.innerText).toEqual(time);
     });
 
-    it("has a base rectangle positioned on X0 Y0", () => {
+    it('has a base rectangle positioned on X0 Y0', () => {
       expect(clock.rectangle).toStrictEqual(new Rectangle(0, 0, 100, 100));
     });
   });
@@ -37,10 +37,10 @@ describe("Clock", () => {
     const fakeElement = {
       offsetWidth: 100,
       offsetHeight: 100,
-      innerText: "",
+      innerText: '',
       style: {
-        top: "",
-        left: "",
+        top: '',
+        left: '',
       },
     };
 
@@ -49,8 +49,8 @@ describe("Clock", () => {
     clock.rectangle.setY(100);
     clock.render();
 
-    expect(clock.referenceElement.style.top).toEqual("100px");
-    expect(clock.referenceElement.style.left).toEqual("100px");
-    expect(clock.referenceElement.innerText).not.toEqual("");
+    expect(clock.referenceElement.style.top).toEqual('100px');
+    expect(clock.referenceElement.style.left).toEqual('100px');
+    expect(clock.referenceElement.innerText).not.toEqual('');
   });
 });

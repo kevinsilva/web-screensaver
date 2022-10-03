@@ -1,4 +1,4 @@
-import Rectangle from "./Rectangle.js";
+import Rectangle from './Rectangle.js';
 
 export default class Clock {
   constructor(referenceElement) {
@@ -14,8 +14,8 @@ export default class Clock {
 
   render() {
     this.updateTime();
-    this.referenceElement.style.top = this.rectangle.y + "px";
-    this.referenceElement.style.left = this.rectangle.x + "px";
+    this.referenceElement.style.top = this.rectangle.y + 'px';
+    this.referenceElement.style.left = this.rectangle.x + 'px';
   }
 
   updateTime() {
