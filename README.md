@@ -82,7 +82,7 @@ I did not include a production bundle because it was not part of my focus for th
 To install the component, clone repository, change into directory on the terminal and install with npm.
 
 ```http
-git clone <repository-url>
+git clone https://github.com/kevinsilva/web-screensaver
 cd web_screensaver
 npm install
 ```
