@@ -87,23 +87,6 @@ cd web_screensaver
 npm install
 ```
 
-Add this to `package.json` scripts property.
-
-```js
-"scripts": {
-  "test": "jest --env=jsdom"
-},
-"babel": {
-  "env": {
-    "test": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
-      ]
-    }
-  }
-},
-```
-
 To run the tests.
 
 ```http
