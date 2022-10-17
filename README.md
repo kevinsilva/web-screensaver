@@ -90,6 +90,12 @@ cd web_screensaver
 npm install
 ```
 
+To run the application.
+
+```bash
+  npm run dev
+```
+
 To run the tests.
 
 ```bash
