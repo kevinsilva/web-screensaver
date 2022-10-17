@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --env=jsdom",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "dev": "live-server",
+    "prefix:css": "postcss -u autoprefixer -r style.css"
   },
   "babel": {
     "env": {
@@ -29,9 +31,13 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-promise": "^6.0.1",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "autoprefixer": "^10.4.12",
+    "jest-environment-jsdom": "^27.1.0",
+    "live-server": "^1.2.2",
+    "postcss-cli": "^10.0.0"
   },
-  "dependencies": {
-    "jest-environment-jsdom": "^27.1.0"
-  }
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
