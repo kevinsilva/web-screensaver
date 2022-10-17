@@ -6,6 +6,8 @@ A screensaver on a webpage that reminds you of the passage of time.
 
 After a period of user inactivity, a clock and an image of a hand appear in an arbitrary, visible position of the screen. They constantly reposition themselves without ever overlapping. When user activity is detected, the screensaver disappears and only restarts after another period of user inactivity.
 
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-success?style=flat-square&logo=codesandbox)](https://codesandbox.io/p/github/kevinsilva/web-screensaver/csb-screensaver?file=%2FREADME.md)
+
 ## Implementation Details
 
 After the initial problem thinking clarification, the approach was broken down into two main separation of tasks: solving the geometric problem of the reposition of elements without overlap, and secondly, the implementation of the binary state associated with the user activity.
