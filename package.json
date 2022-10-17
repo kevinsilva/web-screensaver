@@ -39,7 +39,8 @@
     "autoprefixer": "^10.4.12",
     "jest-environment-jsdom": "^27.1.0",
     "live-server": "^1.2.2",
-    "postcss-cli": "^10.0.0"
+    "postcss-cli": "^10.0.0",
+    "tmpl": ">=1.0.5"
   },
   "browserslist": [
     "last 2 versions"
